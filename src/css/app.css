@@ -1,0 +1,308 @@
+@charset "UTF-8";
+@import url(./fonts/icons/css/icons.css);
+@import url("https://fonts.googleapis.com/css?family=Roboto:500");
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  border: none;
+  outline: none;
+  font-family: "Roboto";
+}
+
+.fix:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.responsive {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+@import 'fonts/digital-desolation-plus/stylesheet.css';
+@import 'fonts/another-font/stylesheet.css';
+*/
+body {
+  background-color: #eef3f6;
+  margin-top: 27.5px;
+}
+
+.App {
+  margin: 0 auto;
+  width: 540px;
+}
+
+.todoForm {
+  background-color: #19ba99;
+  border-radius: 10px;
+  height: 105px;
+  margin-bottom: 24px;
+  padding: 20px;
+  position: relative;
+}
+
+.todoForm input {
+  background-color: #65c4ae;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 35px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 35px;
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  height: 66px;
+  padding-left: 26px;
+  padding-right: 90px;
+  width: 100%;
+  transition: all 300ms;
+}
+
+.todoForm.error input {
+  background-color: #fa4e5c;
+}
+
+.todoForm input::placeholder {
+  color: #fff;
+}
+
+.todoForm button {
+  background-color: #fff;
+  border-radius: 50%;
+  height: 66px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 66px;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.todoForm button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  color: #19ba99;
+  font-family: icons;
+  font-size: 20px;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  top: 50%;
+}
+
+.todoHolder {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.todoHolder li {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  margin-top: 12px;
+  padding: 12px;
+}
+
+.todoHolder li span {
+  color: #2e2e2e;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 22.5px;
+  position: relative;
+  width: calc(100% - 80px);
+}
+
+.todoHolder li span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #eef3f6;
+  height: 100%;
+  right: -40.5px;
+  top: 0;
+  width: 1px;
+  z-index: 1;
+}
+
+.todoHolder li .delete,
+.todoHolder li .check {
+  display: block;
+  height: 40px;
+  min-width: 40px;
+  position: relative;
+  width: 40px;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.todoHolder li .delete::before,
+.todoHolder li .check::before {
+  content: "";
+  display: block;
+  position: absolute;
+  color: #19ba99;
+  font-family: icons;
+  font-size: 20px;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  top: 50%;
+}
+
+.todoHolder li .check::before {
+  content: "\e801";
+}
+
+.todoHolder li.checked .check::before {
+  content: "\e802";
+}
+
+.todoHolder li.checked span {
+  text-decoration: line-through;
+  opacity: 0.5;
+}

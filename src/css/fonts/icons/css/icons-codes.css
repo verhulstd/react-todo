@@ -1,0 +1,5 @@
+
+.icon-plus:before { content: '\e800'; } /* '' */
+.icon-check:before { content: '\e801'; } /* '' */
+.icon-checked:before { content: '\e802'; } /* '' */
+.icon-trash:before { content: '\e803'; } /* '' */

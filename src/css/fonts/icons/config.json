@@ -1,0 +1,34 @@
+{
+  "name": "icons",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "2cc73cc335f054682c04fe63439c4dcb",
+      "css": "trash",
+      "code": 59395,
+      "src": "linecons"
+    },
+    {
+      "uid": "56b0141d7bbb0717fc6246ea145bc0bd",
+      "css": "check",
+      "code": 59393,
+      "src": "elusive"
+    },
+    {
+      "uid": "67a9d2e5512b8aa812eff7da6d36bffc",
+      "css": "checked",
+      "code": 59394,
+      "src": "elusive"
+    },
+    {
+      "uid": "55e2ff85b1c459c383f46da6e96014b0",
+      "css": "plus",
+      "code": 59392,
+      "src": "elusive"
+    }
+  ]
+}
