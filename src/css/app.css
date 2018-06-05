@@ -306,3 +306,7 @@ body {
   text-decoration: line-through;
   opacity: 0.5;
 }
+
+header a.is-active {
+  color: green;
+}

@@ -11,34 +11,16 @@ class App extends Component {
     this.state = {
       error: false,
       term: "",
-      todos: [
-        {
-          title: "Listen to music",
-          checked: false
-        },
-        {
-          title: "Play with kid",
-          checked: false
-        },
-        {
-          title: "Swim in ocean",
-          checked: false
-        },
-        {
-          title: "Do the dishes",
-          checked: true
-        },
-        {
-          title: "Laugh with Tony",
-          checked: true
-        }
-      ]
+      todos: []
     };
   }
-
-  //hook into first second when appcomponent is alive
+  componentWillMount() {
+    console.log("will mount");
+  }
+  //hook into first second when appcomponent is alive (AFTER RENDER)
   componentDidMount() {
-    this.ref = base.syncState("todos/", {
+    //console.log("did mount");
+    base.syncState("todos/", {
       context: this,
       state: "todos",
       asArray: true
@@ -54,11 +36,11 @@ class App extends Component {
   deleteTodo = e => {
     const key = parseInt(e.target.parentElement.getAttribute("index"), 10);
     let todos = this.state.todos;
-    const updatedTodos = todos.filter((todo, index) => {
+    const todosAfterDelete = todos.filter((todo, index) => {
       return index !== key;
     });
     this.setState({
-      todos: updatedTodos
+      todos: todosAfterDelete
     });
   };
 
@@ -95,6 +77,7 @@ class App extends Component {
   };
 
   render() {
+    //console.log("render");
     return (
       <div className="App">
         <TodoForm
